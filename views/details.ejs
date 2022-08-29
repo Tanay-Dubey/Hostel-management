@@ -1,0 +1,101 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="../assets/css/details.css">
+
+  <title>Hostel management</title>
+</head>
+
+<body>
+
+
+  <div class="content">
+
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-12">
+          <div class="form h-100">
+            <h3>Please Fill In Your Details</h3>
+            <form action="/users/details/<%=id%>" class="mb-5" method="post" id="contactForm" name="contactForm">
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Username</label>
+                  <input type="text" class="form-control" name="username" id="username" value="<%=username%>"
+                    disabled>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Email</label>
+                  <input type="text" class="form-control" name="email" id="email" value="<%=email%>" disabled>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Firstname</label>
+                  <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname">
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Lastname</label>
+                  <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Telephone No.</label>
+                  <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="Telephone No.">
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Hostel</label>
+                  <input type="text" class="form-control" name="hostel" id="hostel" placeholder="Hostel">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                  <label for="budget" class="col-form-label">Hostel Fees</label>
+                  <select class="custom-select" id="hostelFees" name="hostelFees">
+                    <option selected value="Pending">Pending</option>
+                    <option value="Paid">Paid</option>
+                  </select>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                  <label for="" class="col-form-label">Room No.</label>
+                  <input type="text" class="form-control" name="roomNo" id="roomNo" placeholder="Room No.">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="submit" value="Submit Details" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            <div id="form-message-warning mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
